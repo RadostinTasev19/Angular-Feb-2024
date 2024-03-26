@@ -16,12 +16,20 @@ export class CurrentThemeComponent implements OnInit {
     private activeRoute: ActivatedRoute
   ) {}
 
+  /*
+  ngOnInit - lifecycle hook which is called once when the component is initialized
+  
+  */
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
-      const id = data['themeId'];
+      
+      const id = data['themeId'];// extracts the themeId parameter from the returned observable and assigns it to id
 
       this.apiService.getTheme(id).subscribe((theme) => {
         this.theme = theme;
+        /*
+          here we subscribe to the returned parameter from getTheme(id) method and assign it to theme parameter.
+        */
       });
     });
   }
