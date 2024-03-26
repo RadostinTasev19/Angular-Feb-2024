@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class WelcomMsgComponent {
   @Input('isLoggedIn') isLoggedIn = false;
+  /*
+  - alows data to be passed from a parent component to a child component
+  -isLoggedIn - can receive its value from its parent component.
+  */
 }
