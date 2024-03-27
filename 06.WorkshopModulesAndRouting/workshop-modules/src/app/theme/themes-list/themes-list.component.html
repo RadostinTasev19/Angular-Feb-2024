@@ -1,5 +1,11 @@
 <main>
   <app-welcom-msg *ngIf="!isLoggedIn" [isLoggedIn]="isLoggedIn" />
+    /*
+    The [isLoggedIn]="isLoggedIn" part is property binding,
+    which means that the isLoggedIn property of app-welcome-msg component is bound to the
+    isLoggedIn variable of its parent component
+    
+    */
   <div *ngIf="isLoading">
     <app-loader />
   </div>
